@@ -1,50 +1,92 @@
-# Welcome to your Expo app 👋
+# Volt ⚡
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Productivity built around your energy, not just your tasks.
 
-## Get started
+Volt is a mobile productivity app that starts with a simple ritual: dump everything on your mind. From there, Volt organises your tasks into **zones** — the energy states you need to be in to actually do that work.
 
-1. Install dependencies
+Deep focus. Admin mode. Creative flow. Recovery. Each part of your day has a zone, and your tasks live inside it. At the end of the day, every completed task becomes a visible win.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## The idea
 
-   ```bash
-   npx expo start
-   ```
+Most to-do apps treat all tasks equally. But sending emails and doing deep creative work aren't the same — they require completely different mental states. Volt is built around that insight: you don't just plan *what* to do, you plan *how you need to show up* to do it.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Brain dump** — get everything out of your head in one go
+- **Zone system** — user-defined focus states (deep work, admin, creative, recovery, etc.)
+- **Plan your day** — assign tasks to zones before the day begins
+- **Zone check-in** — start a zone and work inside that container
+- **Mid-day adjustment** — swap zones or tasks on the fly
+- **Focus timer** — stay inside your zone with a built-in timer
+- **End-of-day recap** — review completed tasks and energy breakdown by zone
+- **Custom zones** — create and manage your own zones
+- **Day reset** — dashboard resets automatically after logging a day
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React Native + Expo (SDK 54) |
+| Language | TypeScript |
+| Backend | Supabase (auth + database) |
+| Local storage | AsyncStorage |
+| Editor | Cursor (AI-assisted development) |
+| Version control | Git / GitHub |
+| Fonts | BricolageGrotesque + DMSans (Expo Google Fonts) |
+
+---
+
+## Screens
+
+| Screen | Description |
+|---|---|
+| `index.tsx` | Home / landing |
+| `auth.tsx` | Authentication |
+| `dashboard.tsx` | Main hub with zone management overlay |
+| `checkin.tsx` | Zone check-in with back navigation |
+| `planday.tsx` | Day planning with zone picker + inline zone creation |
+| `history.tsx` | End-of-day log with expandable zone recap |
+| `walkthrough/` | Onboarding screens |
+
+---
+
+## Getting started
+
+### Prerequisites
+
+- Node.js v20
+- Expo CLI
+- Expo Go app on your phone
+
+### Install & run
 
 ```bash
-npm run reset-project
+npm install --legacy-peer-deps
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Scan the QR code with Expo Go on your iPhone or Android device.
 
-## Learn more
+### Key conventions
 
-To learn more about developing your project with Expo, look at the following resources:
+- `--legacy-peer-deps` required for all installs (configured in `.npmrc`)
+- Fonts use camelCase naming: `BricolageGrotesque_400Regular`, `DMSans_400Regular`
+- Custom zones synced across screens via shared `custom_zones` AsyncStorage key
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## Status
 
-Join our community of developers creating universal apps.
+**In active development** — core zone system, planning flow, check-in, and end-of-day recap are all working. App is currently running on device via Expo Go.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## Built by
+
+Jenny Truong — [jnnyswrld.framer.website](https://jnnyswrld.framer.website) · [LinkedIn](https://www.linkedin.com/in/vuong-anh-truong/) · [Portfolio](https://www.notion.so/2fccdb3df59d8031a149ee21343a0110)
